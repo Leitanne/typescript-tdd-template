@@ -3,7 +3,7 @@
         {
             "id": 1,
             "nombre": "Fregar los platos",
-            "completada": true
+            "completada": false
         },
         {
             "id": 2,

@@ -1,12 +1,10 @@
-import { Server } from "./Server";
+const express = require('express')
+const app = express()
+const tasks_routes = require('../user/infrastructure/routes/tasks')
 
-export class App {
-	server?: Server;
+app.listen(5000, () => {
+    console.log('Server is listening on port 5000')
+})
 
-	async start(): Promise<void> {
-		const port = process.env.PORT ?? "8000";
-		this.server = new Server(port);
-
-		await this.server.listen();
-	}
-}
+app.use(express.json());
+app.use('/api/tasks', tasks_routes);

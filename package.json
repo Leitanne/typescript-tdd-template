@@ -2,14 +2,14 @@
   "name": "typescript-tdd-template",
   "version": "1.0.0",
   "description": "**1.- instalar typescript en el folder proyecto**",
-  "main": "./src/backend/server.start.ts",
+  "main": "./src/backend/App.ts",
   "scripts": {
     "test": "jest",
     "lint": "eslint --ext .ts ./src",
     "lint:fix": "eslint --fix --ext .ts ./src",
-    "dev": "NODE_ENV=dev ts-node-dev --inspect --respawn --pretty --transpile-only src/backend/server.start.ts",
+    "dev": "NODE_ENV=dev ts-node-dev --inspect --respawn --pretty --transpile-only src/backend/App.ts",
     "build": "rimraf dist && tsc",
-    "start": "node dist/src/backend/server.start.js"
+    "start": "node dist/src/backend/App.js"
   },
   "author": "",
   "license": "ISC",

@@ -100,4 +100,8 @@ function markAsComplete(id: number): boolean {
     }
 }
 
-export {addTask, findTask, deleteTask, markAsComplete, JsonItem}
+function getTaskList(){
+    return jsonData;
+}
+
+export {addTask, findTask, deleteTask, markAsComplete, JsonItem, getTaskList}
